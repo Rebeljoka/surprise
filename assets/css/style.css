@@ -1,0 +1,142 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&family=Shadows+Into+Light+Two&family=Satisfy&display=swap');
+
+:root {
+    --heading-font: 'Sulphur Point', sans-serif;
+    --body-font: 'Shadows Into Light Two', cursive;
+    --accent-font: 'Satisfy', cursive;
+}
+
+body {
+    font-family: var(--body-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--heading-font);
+}
+
+.accent,
+.card-title {
+    font-family: var(--accent-font);
+}
+
+/* Navbar background - match Bootstrap primary */
+.navbar {
+    background-color: #0d6efd !important;
+    /* Bootstrap 5 primary */
+}
+
+/* Navbar text color */
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-brand {
+    color: #fff !important;
+}
+
+/* Hero Section */
+header.bg-primary.text-white.text-center.py-5.mb-4 {
+    margin-top: -36px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Timeline horizontal line */
+.cd-h-timeline__line {
+    position: relative;
+    height: 4px;
+    background: #0d6efd;
+    margin: 0 1rem;
+}
+
+/* Timeline horizontal bar and dots */
+.timeline-bar-wrapper {
+    height: 48px;
+    width: 100%;
+    margin: 0 auto;
+}
+.timeline-bar {
+    height: 4px;
+    background: #0d6efd;
+    z-index: 1;
+    width: 100%;
+}
+.timeline-dates-row {
+    z-index: 2;
+    width: 100%;
+}
+
+/* Timeline title */
+.timeline-title {
+    color: #333;
+    padding-bottom: 2rem;
+}
+
+/* Timeline dot styles */
+.cd-h-timeline__date {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: #fff;
+    color: #0d6efd;
+    border: 2px solid #0d6efd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 40px;
+    transition: background 0.2s, color 0.2s;
+}
+.cd-h-timeline__date--selected {
+    background: #0d6efd;
+    color: #fff;
+}
+
+/* Timeline navigation buttons */
+.cd-h-timeline__navigation {
+    background: #0d6efd;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+.cd-h-timeline__navigation--inactive {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Timeline achievement cards: resize and center */
+/* Timeline card images */
+.timeline-img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.cd-h-timeline .card {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+/* Footer text color */
+footer {
+    color: #fff !important;
+}

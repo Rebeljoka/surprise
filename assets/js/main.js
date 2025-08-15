@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	const muteIcon = document.getElementById('mute-icon');
 
 	if (audio && volumeSlider && muteBtn && muteIcon) {
-		audio.volume = 0.5;
-		volumeSlider.value = 0.5;
+		audio.volume = 0.3;
+		volumeSlider.value = 0.3;
 		volumeSlider.addEventListener('input', function () {
 			audio.volume = parseFloat(this.value);
 			audio.muted = (audio.volume === 0);

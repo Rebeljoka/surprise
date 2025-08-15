@@ -1,5 +1,20 @@
 // Horizontal Timeline JS
 document.addEventListener('DOMContentLoaded', function () {
+	// Auto-play and loop background music
+	const audio = document.getElementById('site-audio');
+	if (audio) {
+		// Try to play immediately (some browsers block until user interaction)
+		audio.loop = true;
+		audio.volume = 0.5; // Optional: set a reasonable volume
+		audio.play().catch(() => {
+			// If blocked, play on first user interaction
+			const resumeAudio = () => {
+				audio.play();
+				document.removeEventListener('click', resumeAudio);
+			};
+			document.addEventListener('click', resumeAudio);
+		});
+	}
 	const timelineSection = document.getElementById('achievements');
 	if (!timelineSection) return;
 

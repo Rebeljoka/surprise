@@ -1,16 +1,28 @@
 /* Google Fonts Import */
 @import url('https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&family=Shadows+Into+Light+Two&family=Satisfy&display=swap');
 
+/* Root Variables */
 :root {
     --heading-font: 'Sulphur Point', sans-serif;
     --body-font: 'Shadows Into Light Two', cursive;
     --accent-font: 'Satisfy', cursive;
 }
 
+/* Base Styles */
 body {
     font-family: var(--body-font);
+    background: linear-gradient(-45deg,
+        #0d6efd 0%,
+        #c3a1e6 15%, /* pastel purple */
+        #fcbad3 30%, /* pastel pink */
+        #fff 50%,
+        #fcbad3 70%, /* pastel pink */
+        #c3a1e6 85%, /* pastel purple */
+        #0d6efd 100%
+    );
 }
 
+/* Typography */
 h1,
 h2,
 h3,
@@ -19,40 +31,37 @@ h5,
 h6 {
     font-family: var(--heading-font);
 }
-
 .accent,
 .card-title {
     font-family: var(--accent-font);
 }
 
-/* Navbar background - match Bootstrap primary */
-.navbar {
+/* Layout Utilities */
+header.bg-primary.text-white.text-center.py-5.mb-4 {
+    margin-top: -36px;
+    position: relative;
+    z-index: 1;
     background-color: #0d6efd !important;
-    /* Bootstrap 5 primary */
 }
 
-/* Navbar text color */
+/* Navbar */
+.navbar {
+    background-color: #0d6efd !important;
+}
 .navbar .navbar-nav .nav-link,
 .navbar .navbar-brand {
     color: #fff !important;
 }
 
 /* Hero Section */
-header.bg-primary.text-white.text-center.py-5.mb-4 {
-    margin-top: -36px;
-    position: relative;
-    z-index: 1;
-}
 
-/* Timeline horizontal line */
+/* Timeline */
 .cd-h-timeline__line {
     position: relative;
     height: 4px;
     background: #0d6efd;
     margin: 0 1rem;
 }
-
-/* Timeline horizontal bar and dots */
 .timeline-bar-wrapper {
     height: 48px;
     width: 100%;
@@ -68,14 +77,10 @@ header.bg-primary.text-white.text-center.py-5.mb-4 {
     z-index: 2;
     width: 100%;
 }
-
-/* Timeline title */
 .timeline-title {
     color: #333;
     padding-bottom: 2rem;
 }
-
-/* Timeline dot styles */
 .cd-h-timeline__date {
     display: inline-flex;
     align-items: center;
@@ -100,8 +105,6 @@ header.bg-primary.text-white.text-center.py-5.mb-4 {
     background: #0d6efd;
     color: #fff;
 }
-
-/* Timeline navigation buttons */
 .cd-h-timeline__navigation {
     background: #0d6efd;
     color: #fff;
@@ -116,16 +119,12 @@ header.bg-primary.text-white.text-center.py-5.mb-4 {
     opacity: 0.5;
     pointer-events: none;
 }
-
-/* Timeline achievement cards: resize and center */
-/* Fix flex container overflow for timeline cards */
 .cd-h-timeline .row.justify-content-center {
     flex-wrap: wrap;
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
 }
-/* Timeline card images */
 .timeline-img {
     width: 100%;
     max-width: 450px;
@@ -143,12 +142,7 @@ header.bg-primary.text-white.text-center.py-5.mb-4 {
     width: 100%;
 }
 
-/* Add space below contact section above footer */
-#contact {
-    padding-bottom: 3rem;
-}
-
-/* Contact section grid and card styling */
+/* Cards (Contact, Why You'll Succeed, etc.) */
 .contact-card {
     border-radius: 1rem;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
@@ -172,7 +166,12 @@ header.bg-primary.text-white.text-center.py-5.mb-4 {
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
-/* Footer text color */
+/* Section Spacing */
+#contact {
+    padding-bottom: 3rem;
+}
+
+/* Footer */
 footer {
     color: #fff !important;
     padding-top: 2.5rem;

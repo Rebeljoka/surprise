@@ -78,5 +78,34 @@ document.addEventListener('DOMContentLoaded', function () {
 			}
 		});
 	}
+
+	// Footer volume controls
+	const volumeSlider = document.getElementById('volume-slider');
+	const muteBtn = document.getElementById('mute-btn');
+	const muteIcon = document.getElementById('mute-icon');
+
+	if (audio && volumeSlider && muteBtn && muteIcon) {
+		audio.volume = 0.5;
+		volumeSlider.value = 0.5;
+		volumeSlider.addEventListener('input', function () {
+			audio.volume = parseFloat(this.value);
+			audio.muted = (audio.volume === 0);
+			muteIcon.className = audio.muted ? 'fa-solid fa-volume-mute' : 'fa-solid fa-volume-up';
+		});
+
+		muteBtn.addEventListener('click', function () {
+			if (audio.muted || audio.volume === 0) {
+				audio.muted = false;
+				audio.volume = 1;
+				volumeSlider.value = 1;
+				muteIcon.className = 'fa-solid fa-volume-up';
+			} else {
+				audio.muted = true;
+				audio.volume = 0;
+				volumeSlider.value = 0;
+				muteIcon.className = 'fa-solid fa-volume-mute';
+			}
+		});
+	}
 });
 
